@@ -1,0 +1,497 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"fi",
+				"find_element_by_xpath\tfunction"
+			],
+			[
+				"profile",
+				"profile_drawer\tstatement"
+			],
+			[
+				"find",
+				"find_element_by_id\tfunction"
+			],
+			[
+				"f",
+				"find_element_by_xpath"
+			],
+			[
+				"sa",
+				"save_screenshot"
+			],
+			[
+				"a",
+				"actual_number"
+			],
+			[
+				"open",
+				"open_file"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"contents": "\"\"\"from selenium import webdriver\n\nbrowser = webdriver.Firefox()\nbrowser.get('http://seleniumhq.org/')\"\"\"\n\n\"\"\"import os\nfrom selenium import webdriver\n# chromedriver = \"/Users/adam/Downloads/chromedriver\"\nos.environ[\"webdriver.chrome.driver\"] = chromedriver\ndriver = webdriver.Chrome(chromedriver)\ndriver.get(\"http://stackoverflow.com\")\ndriver.quit()\"\"\"\n\n # import time\n\nfrom selenium import webdriver\n#import pyscreenshot as ImageGrab\n #import selenium.webdriver.chrome.service as service\nbrowser = webdriver.Firefox()\n\n #service = service.Service('/path/to/chromedriver')\n#service.start()\n#capabilities = {'chrome.binary': '/path/to/custom/chrome'}\n#driver = webdriver.Remote(service.service_url, capabilities)\nbrowser.get('http://student.vidyamandir.com/')\nbrowser.save_screenshot(\"screenshot.png\")\nbrowser.close()\n#time.sleep(5)\n#img_landing = ImageGrab.grab()\n#plt.imshow(img_landing, cmap='gray', interpolation='bicubic')\n#browser.get('http://student.vidyamandir.com/purchasable_course')\n#time.sleep(5)\n#browser.get('http://student.vidyamandir.com/free_test')\n#time.sleep(5)\n#plt.imshow(img_free_test, cmap='gray', interpolation='bicubic')\n#plt.show()\n#print (response)\n#time.sleep(5) # Let the user actually see something!\n\n",
+			"file": "selo.py",
+			"file_size": 1270,
+			"file_write_time": 131458347708227191,
+			"settings":
+			{
+				"buffer_size": 1231,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "15000+10000+10000bday+",
+			"settings":
+			{
+				"buffer_size": 22,
+				"line_ending": "Windows",
+				"name": "15000+10000+10000bday+"
+			}
+		},
+		{
+			"contents": "### script for vidyamandir student ### \n\n### script for vidyamandir student ### \n\n### script for vidyamandir student ### \nimport time\nfrom selenium import webdriver\nbrowser = webdriver.Firefox()\n #driver to use\nbrowser.get('http://student.vidyamandir.com/')\n#landing page\n#time.sleep(10)\nbrowser.save_screenshot(\"home.png\")\n\nbrowser.get('http://student.vidyamandir.com/purchasable_course')\n#landing page sample courses\n#time.sleep(10)\n#browser.save_screenshot(\"sample courses.png\")\n\n\n\nbrowser.get('http://student.vidyamandir.com/free_test')\n#landing page free tests\n#browser.save_screenshot(\"sample test .png\")\n\n#pre log in page\nbrowser.get('http://student.vidyamandir.com/login')\n#time.sleep(10)\n\nbrowser.save_screenshot(\"prelogin page .png\")\nroll_number= browser.find_element_by_xpath(\"//input[@name='email_or_roll_number']\")\n #print(roll_number.get_attribute(\"iit200001\"))\nroll_number.send_keys(\"iit200001\")\n\npassword = browser.find_element_by_xpath(\"//input[@name='password']\")\npassword.send_keys(\"123456\")\n\nlogin = browser.find_element_by_xpath(\"//button[@type='submit']\")\nlogin.click()\n\n#forget_password = browser.find_elements_by_id(\"forget-password\").click()\n\n\n\ntime.sleep(10)\n\n\n#browser.save_screenshot(\"http://student.vidyamandir.com/dashboard\")\n#time.sleep(10)\n#browser.save_screenshot(\"http://student.vidyamandir.com/notification/show_all\")\n#time.sleep(10)\n\nbrowser.close()\n\n\n\n",
+			"file": "/C/Users/Tarun Sharma/student_vmc.py",
+			"file_size": 1520,
+			"file_write_time": 131467881314811001,
+			"settings":
+			{
+				"buffer_size": 1389,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "ebooks=browser.find_element_by_xpath(\"//a[@href='/ebook']\")\nebooks=browser.find_element_by_xpath()\nebooks.click()\n\nvideos=browser.find_element_by_xpath(\"//a[@href='/video']\")\nvideos.click()\n\nexercise=browser.find_element_by_xpath(\"//a[@href='/exercise']\")\nexercise.click()\n\ntests=browser.find_element_by_xpath(\"//a[@href='/test']\")\ntest.click()\n\nRevision=browser.find_element_by_xpath(\"//a[@href='/revision']\")\nRevision.click()\n\nReports=browser.find_element_by_xpath(\"//a[contains(.,'Reports')]\")\nreports.click()\n\nDoubts=browser.find_element_by_xpath(\"//a[@href='/doubt']\")\nDoubts.click()\n\nprofile_drawer =browser.find_element_by_xpath(\"//span[@class='username username-hide-mobile']\")\nprofile_drawer.click()\nmy_profile =browser.find_element_by_xpath(\"//a[@href='/profile']\")\nmy_profile.click()\n\n\"\"\"\n\n#logout =browser.find_element_by_xpath(\"//a[@href='/logout']\")\n#logout = \n#logout.click()",
+			"settings":
+			{
+				"buffer_size": 890,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "import http.client\nimport webbrowser\nimport smtplib\nsenders = \"tarun.sharma@100percentile.com\"\nreceivers = \"paras.jain@100percentile.com,hitesh@100percentile.com\"\n\nwebbrowser.open_new_tab(\"cksha.leaplms.in\")\nc = http.client.HTTPConnection(\"cksha.leaplms.in\")\nc.request(\"HEAD\", \"\")\nif c.request  == 301:\n  print((c.getresponse().status)) \nmessage = \"\"\"From: From tarun <tarun.sharma@.100percentile.com>\nTo: To \"paras.jain@100percentile.com\",\"hitesh@100percentile.com\">\nSubject: \"check for email redirect\"\"\"\ntry:\n   smtpObj = smtplib.SMTP('localhost')\n   smtpObj.sendmail(sender, receivers, message)         \n   print (\"Successfully sent email\")\nexcept SMTPException:\n   print (\"Error: unable to send email\")\n\n \n\n",
+			"file": "web2.py",
+			"file_size": 736,
+			"file_write_time": 131456517851270929,
+			"settings":
+			{
+				"buffer_size": 711,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "woride.py",
+			"settings":
+			{
+				"buffer_size": 202,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "Packages/Python/Python.sublime-build",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 490.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"Anaconda: Next lint error"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"pa",
+				"Package Control: Install Package"
+			],
+			[
+				"beha",
+				"Set Syntax: Behat"
+			],
+			[
+				"gherkin",
+				"Gherkin/Cucumber: Format"
+			],
+			[
+				"gher",
+				"Set Syntax: Gherkin"
+			],
+			[
+				"feature",
+				"Preferences: Package Control Settings – User"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"cucu",
+				"Gherkin/Cucumber: Format"
+			],
+			[
+				"packa",
+				"Preferences: Browse Packages"
+			]
+		],
+		"width": 560.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/C/Users/Tarun Sharma/student_vmc",
+		"/C/Users/Tarun Sharma/### script for vidyamandir student ###"
+	],
+	"find":
+	{
+		"height": 43.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			" webdriver.find_element",
+			"webdriver",
+			"\"("
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"browser.find_element",
+			"browser"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 3,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "selo.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1231,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								713,
+								801
+							]
+						],
+						"settings":
+						{
+							"auto_complete_triggers":
+							[
+								{
+									"characters": ".",
+									"selector": "source.python - string - comment - constant.numeric"
+								},
+								{
+									"characters": ".",
+									"selector": "source.python - string - constant.numeric"
+								}
+							],
+							"syntax": "Packages/Python/Python.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 22,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								22,
+								22
+							]
+						],
+						"settings":
+						{
+							"auto_name": "15000+10000+10000bday+",
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "/C/Users/Tarun Sharma/student_vmc.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1389,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1185,
+								1185
+							]
+						],
+						"settings":
+						{
+							"auto_complete_triggers":
+							[
+								{
+									"characters": ".",
+									"selector": "source.python - string - comment - constant.numeric"
+								},
+								{
+									"characters": ".",
+									"selector": "source.python - string - constant.numeric"
+								},
+								{
+									"characters": ".",
+									"selector": "source.python - string - constant.numeric"
+								},
+								{
+									"characters": ".",
+									"selector": "source.python - string - constant.numeric"
+								}
+							],
+							"syntax": "Packages/Python/Python.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 378.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 890,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								890,
+								890
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "web2.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 711,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								709,
+								709
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "woride.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 202,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								158,
+								158
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 26.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "Packages/Python/Python.sublime-build",
+	"project": "selo.sublime-project",
+	"replace":
+	{
+		"height": 80.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 225.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
